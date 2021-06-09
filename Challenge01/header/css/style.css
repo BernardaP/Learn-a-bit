@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* font-family: 'Rubik', sans-serif;
+font-family: 'Viga', sans-serif; */
+
+body {
+  height: 100vh; 
+  background-image: url(../images/mintbean-dome.png);
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+  
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 10%;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item{
+  padding-right: 5px;
+  /* border-right: white;
+  margin: 0% 2%; */
+  /* border-right: solid white;
+  border-width: medium;
+  padding-right: 2%; */
+}
+.nav-link:hover{
+  color: #5EF4D6;
+}
+.nav-btn {
+  margin-left: 6px;
+  color: #221727 ;
+}
+.nav-btn a {
+  text-transform: capitalize;
+  color: #221727 ;
+}
+
+.hamburger-icon {
+  display: none;
+}
+
+.bar-icon {
+  display: block;
+  width: 20px;
+  height: 2px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #5EF4D6;
+}
+
+
+.intro-card {
+  
+  border: solid  #5EF4D6;
+  border-radius: 10px;
+  background-color: rgba(34, 23, 39, 0.7);
+  color: white;
+  /* opacity: .7; */
+  margin:10% 5%;
+  padding: 5%;
+}
+
+.intro-card h1, button {
+  font-family: 'Viga', sans-serif;
+  text-transform: uppercase;
+}
+
+.card-content {
+  line-height: 35px;
+  padding: 7% 0;
+  opacity: 0.7;
+}
+
+button {
+  background-color: #5EF4D6;
+  border-radius: 5px;
+  border: none;
+  padding: 5px 20px;
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+  /* font-weight: 300; */
+  font-size: 20px;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 768px) {
+  .hamburger-icon {
+    display: block;
+  }
+  .nav-menu {
+    background-color: #4143B1 ;
+    position: fixed;
+    top: 62.78px;
+    flex-direction: column;
+    width: 100%;
+    text-align:left ;
+    left: -100%;
+    font-size: 22px;
+    z-index: 99;
+  }
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-item {
+    margin: 2% 0;
+    text-align: left;
+  }
+  .nav-divider {
+    display: none;
+  }
+  .hamburger-icon.active .bar-icon:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+  .hamburger-icon.active .bar-icon:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger-icon.active .bar-icon:nth-child(3) {
+    transform: translateY(-8px) rotate(315deg);
+  }
+  button {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 769px){
+  .intro-card {
+    border: solid #5EF4D6;
+    border-radius: 10px;
+    background-color: rgba(34, 23, 39, 0.7);
+    color: white;
+    /* opacity: .7; */
+    margin: 13% 4%;
+    padding: 2%;
+    width: 50%;
+  }
+  button {
+    background-color: #5EF4D6;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    /* font-weight: 300; */
+    font-size: 25px;
+  }
+  .card-content {
+    line-height: 36px;
+    font-size: 25px;
+    padding: 3% 0;
+  }
+  .navbar {
+    font-size: 25px;
+  }
+  main {
+    justify-content: left;
+  }
+ 
+}
