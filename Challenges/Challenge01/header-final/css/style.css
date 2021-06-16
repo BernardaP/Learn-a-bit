@@ -1,48 +1,76 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
 body {
-  height: 100vh; 
-  background-image: url(../images/mintbean-dome.png);
-  background-size:cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  font-family: 'Rubik', sans-serif;
-  font-weight: 300;
+  min-height: 100vh;
+  font-family: 'Rubik', sans-serif; 
+}
+
+a {
+  color: white;
+  text-decoration: none;
 }
 
 ul {
   list-style: none;
 }
 
-a {
-  text-decoration: none;
-  color: white;
+.header {
+  min-height: 100vh;
+  background-image: url(../images/mintbean-dome.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
 }
 
-main {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .navbar {
-  background-color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2% 10%;
+  padding: 16px 20px;
+  background-color: black;
 }
 
 .nav-menu {
   display: flex;
 }
 
-.nav-item{
-  padding-right: 5px;
+.nav-menu {
+  /* set to slide from the right */
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  flex-direction: column;
+  width: 0;
+  height: 100%;
+  padding-top: 60px;
+  overflow-x: hidden;
+  font-size: 22px;
+  background-color: #4143B1;
+  transition: 0.5s;
+} 
+
+.nav-menu.active {
+  width: 50%;
+}
+
+.nav-item {
+  padding: 5%;
+  margin: 0 10%;
+}
+
+.nav-divider {
+  display: none;
 }
 
 .nav-link:hover{
@@ -50,16 +78,12 @@ main {
 }
 
 .nav-btn a {
-  text-transform: capitalize;
   color: #221727 ;
+  text-transform: capitalize;
 }
 
 .nav-btn a:hover {
   color: white;
-}
-
-.hamburger-icon {
-  display: none;
 }
 
 /* Creates the hamburger icon */
@@ -68,54 +92,77 @@ main {
   width: 20px;
   height: 2px;
   margin: 5px auto;
-  transition: all 0.3s ease-in-out;
   background-color: #5EF4D6;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger-icon {
+  z-index: 2;
+  display: block;
+}
+
+/* Transforms the hamburger icon into an close icon (X) */
+.hamburger-icon.active .bar-icon:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+.hamburger-icon.active .bar-icon:nth-child(2) {
+  display: table-row;
+  /* opacity: 0; */
+}
+.hamburger-icon.active .bar-icon:nth-child(3) {
+  transform: translateY(-8px) rotate(315deg);
 }
 
 .intro-card {
+  padding: 5%;
+  margin:10% 5%;
+  color: white;
+  background-color: rgba(34, 23, 39, 0.7);
   border: solid  #5EF4D6;
   border-radius: 10px;
-  background-color: rgba(34, 23, 39, 0.7);
-  color: white;
-  margin:10% 5%;
-  padding: 5%;
 }
 
-.intro-card h1, button {
+.card-title {
   font-family: 'Viga', sans-serif;
+  font-size: 1.7em;
   text-transform: uppercase;
 }
 
 .card-content {
+  padding: 16px 0;
+  font-weight: 300;
   line-height: 35px;
-  padding: 7% 0;
   opacity: 0.7;
 }
 
-button {
-  background-color: #5EF4D6;
-  border-radius: 5px;
-  border: none;
+.button {
+  display: block;
   padding: 5px 20px;
-  text-align: center;
   font-family: 'Rubik', sans-serif;
   font-size: 20px;
+  font-weight: 400;
+  color: #221727;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #5EF4D6;
+  border: none;
+  border-radius: 5px;
 }
 
-button:hover {
+.button:hover {
   background-color: rgba(94, 244, 214, 0.8)
 }
 
 
 /* MEDIA QUERIES */
 @media only screen and (max-width: 768px) {
-  .hamburger-icon {
+  /* .hamburger-icon {
     display: block;
     z-index: 2;
-  }
-  .nav-menu {
+  } */
+  /* .nav-menu {
     /* set to slide from the right */
-    background-color: #4143B1;
+    /* background-color: #4143B1;
     position: fixed;
     top: 0;
     flex-direction: column;
@@ -127,9 +174,9 @@ button:hover {
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s;
-  } 
+  }  */ 
 
-  .nav-menu.active {
+  /* .nav-menu.active {
     width: 50%;
   }
 
@@ -143,7 +190,7 @@ button:hover {
   }
   
   /* Transforms the hamburger icon into an close icon (X) */
-  .hamburger-icon.active .bar-icon:nth-child(1) {
+  /* .hamburger-icon.active .bar-icon:nth-child(1) {
     transform: translateY(6px) rotate(45deg);
   }
   .hamburger-icon.active .bar-icon:nth-child(2) {
@@ -151,53 +198,64 @@ button:hover {
   }
   .hamburger-icon.active .bar-icon:nth-child(3) {
     transform: translateY(-8px) rotate(315deg);
-  }
-  .card-button {
-    width: 100%;
-  }
+  }  */
+  
 }
 
-@media only screen and (min-width: 769px){
+@media only screen and (min-width: 768px){
+  .hamburger-icon {
+    display: none;
+  }
+  .nav-menu {
+    position: unset;
+    top: auto;
+    right: auto;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    padding-top: 0;
+    overflow-x: visible;
+    background-color: black;
+    transition: none;
+  }
   .intro-card {
-    border: solid #5EF4D6;
-    border-radius: 10px;
-    background-color: rgba(34, 23, 39, 0.7);
-    color: white;
-    margin: 13% 4%;
-    padding: 2%;
     width: 50%;
+    padding: 2%;
+    margin: 13% 4%;
   }
 
-  button {
-    background-color: #5EF4D6;
-    border-radius: 5px;
-    border: none;
+  .button {
+    display: inline-block;
     padding: 10px 20px;
-    text-align: center;
-    font-family: 'Rubik', sans-serif;
-    font-size: 25px;
+    font-size: 25px;   
   }
 
   .card-content {
+    padding: 3% 0;
     line-height: 36px;
     font-size: 25px;
-    padding: 3% 0;
   }
 
   .navbar {
-    font-size: 25px;
+    padding: 16px 30px;
   }
 
   .nav-menu {
     justify-content: space-between;
     align-items: center;
   }
-
+  .nav-item{
+    padding: 0;
+    padding-right: 16px;
+    margin: 0;
+  }
   .nav-btn {
     margin-left: 15px;
   }
-
-  main {
+  .container {
     justify-content: left;
+  }
+  .nav-divider {
+    display: contents;
   }
 }
