@@ -41,3 +41,11 @@ Learn-a-bit will teach you the fundamentals through a hands-on approach. You wil
     Here you will find solution files for every Learn-a-bit challenge.
 
 - [Challenge #1 - Solution](./Solutions/Challenge01/)
+---
+
+## Learn-a-bit Submissions
+
+    Here you will find the submission files for every Learn-a-bit challenge.
+
+- [Challenge #1 - Submission](./Challenges/Challenge01/header-final/)
+- [Challenge #2 - Submission](./Challenges/Challenge02/)
