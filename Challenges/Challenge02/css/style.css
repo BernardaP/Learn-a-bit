@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Rubik', sans-serif; 
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.about-container {
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #4143B1;
+}
+
+.intro-card {
+  /* padding: 5%; */
+  /* margin:10% 5%; */
+  color: white;
+  
+  border: solid  #5EF4D6;
+  border-radius: 10px;
+}
+
+/* may have to change to an ID #about-card */
+.about-card {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(34, 23, 39);
+}
+.about-title {
+  font-family: 'Viga', sans-serif;
+  font-size: 30px;
+  color: #5EF4D6;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 15px 0 30px;
+  /* padding-bottom: 20px; */
+}
+img { 
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.card-title {
+  font-family: 'Viga', sans-serif;
+  text-transform: uppercase;
+}
+.card-about-title {
+  padding: 15px 20px;
+  font-size: 25px;
+}
+
+.card-about-content {
+  padding: 10px 20px;
+  font-weight: 300;
+  line-height: 30px;
+}
+.button {
+  display: block;
+  padding: 5px 20px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #221727;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #5EF4D6;
+  border: none;
+  border-radius: 5px;
+}
+
+.card-about-btn {
+  margin:15px
+}
+
+.button:hover {
+  background-color: rgba(94, 244, 214, 0.8)
+}
+
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 768px){
+  .about-card{
+    display: flex;
+    flex-direction: row;
+    margin: 0 50px;
+    /* height: 60vh; */
+  }
+  img {
+    width: 45%;
+    border-radius: 10px 0 0 10px;
+  }
+  .card-image {
+    object-fit: cover;
+    object-position: center;
+  }
+  .about-title {
+    /* padding-top: 50px; */
+    font-size: 40px;
+  }
+  .about-card-horizontal{
+    padding: 15px;
+  }
+  .card-about-title {
+    
+    font-size: 25px;
+  }
+  .card-about-content {
+    margin-bottom: 10px;
+  }
+  .card-about-content, .card-about-title {
+    padding: 12px;
+  }
+  .card-about-btn {
+    /* s */
+    padding: 8px 25px;
+    margin-left: 10px;
+  }
+}
+
+@media only screen and (min-width: 992px){
+  .about-title {
+    font-size: 45px;
+  }
+  .about-card {
+    margin: 0 80px;
+  }
+  .card-about-title {
+    padding: 15px 20px;
+    font-size: 30px;
+    /* text-align: center; */
+  }
+  .card-about-btn {
+    /* display: block; */
+    width: 60%;
+    padding: 8px 15px;
+  }
+}
