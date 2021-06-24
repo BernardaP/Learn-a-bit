@@ -1,0 +1,149 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Rubik', sans-serif; 
+}
+
+.team{
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #4143B1;
+}
+
+.intro-card {
+  color: white;
+  border: solid  #5EF4D6;
+  border-radius: 10px;
+}
+
+/* may have to change to an ID #about-card */
+.about-card {
+  padding: 0;
+  margin: 0;
+  margin-top: 175px;
+  background-color: rgb(34, 23, 39);
+  text-align: center;
+}
+
+.about-title {
+  padding: 15px 0 0px;
+  font-family: 'Viga', sans-serif;
+  font-size: 40px;
+  color: #5EF4D6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.profile-img { 
+  width: 250px;
+  height: 250px;
+  margin-top: -120px;
+  border: solid #5EF4D6;
+  border-radius: 50%;
+
+}
+
+img {
+  height: 100%;
+  width: auto;
+}
+
+.card-title {
+  font-family: 'Viga', sans-serif;
+}
+.card-about-title {
+  padding: 15px 20px;
+  font-size: 25px;
+}
+.profile-name {
+  color: #5EF4D6;
+  padding-bottom: 0px;
+  font-size: 30px;
+  font-weight: 300;
+}
+.profile-subtitle {
+  color: #24E5A3;
+  padding-top: 0px;
+  font-size: 12px;
+  opacity: .7;
+}
+.card-about-content {
+  padding: 50px 40px 20px;
+  font-weight: 300;
+  font-size: 18px;
+  opacity: .7;
+}
+.circle {
+  padding: 6px;
+  margin: 0 5px;
+  border: 2px solid #5EF4D6;
+  border-radius: 50%;
+}
+.social-media-icons {
+  color:#5EF4D6;
+  margin: 15px 0;
+}
+
+
+
+
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 768px){
+  .team {
+    padding: 20px 80px;
+  }
+  .about-card{
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+}
+
+@media only screen and (min-width: 992px){
+  .team-card-horizontal {
+    display: flex;
+  }
+  .card-about-content {
+    font-size: 15px;
+    padding: 50px 20px 20px;
+  }
+  .profile-img {
+    width: 200px;
+    height: 200px;
+  }
+  .about-card {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .profile-name {
+    font-size: 25px;
+  }
+  .circle {
+    margin: 0 3px;
+  }
+ 
+}
+
+@media only screen and (min-width: 1200px){
+  .about-card {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  .circle {
+    margin: 0 15px;
+  }
+  .card-about-content {
+    font-size: 17px;
+    padding: 50px 35px 20px;
+  }
+  .profile-name {
+    font-size: 30px;
+  }
+}    
