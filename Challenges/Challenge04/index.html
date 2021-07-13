@@ -5,11 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mintbean Learn-a-bit Challenge 04 - Contact</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&family=Viga&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awsome scripts -->
+    <script src="https://kit.fontawesome.com/4d53092070.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-    Have a question about a Learn-a-bit or workshop? Want to speak at one of our
-    events or discuss a potential collaboration? Contact us, we'd love to start
-    a conversation.
+    <section class="contact">
+      <h1 class="about-title">Contact us</h1>
+      <article class="contact-card">
+        <div class="contact-info border-bckgd">
+          <img class="contact-logo" src="images/learnabit-logo.svg" alt="">
+          <p>Have a question about a Learn-a-bit or workshop? Want to speak at one of our
+              events or discuss a potential collaboration? Contact us, we'd love to start
+              a conversation.
+          </p>
+          <div class="social-media-icons">
+            <i class="fas fa-globe-americas fa-2x circle"></i>
+            <i class="fab fa-github fa-2x github-icon circle"></i>
+            <i class="fab fa-linkedin-in fa-2x linkedin-icon circle"></i>
+            <i class="far fa-envelope fa-2x circle"></i>
+          </div> 
+        </div>
+        <form class="contact-form" action="">
+          <!-- <label for="full-name"></label> -->
+          <input class="border-bckgd" type="text" name="full-name" id="full-name" placeholder="Full name">
+          <input class="border-bckgd" type="email" name="email" id="email" placeholder="Email">
+          <textarea class="border-bckgd" name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
+          <input class="form-button button" type="sumit" value="Send">
+        </form>
+      </article>
+     
+    </section>
+
+    
   </body>
 </html>
