@@ -56,6 +56,7 @@ Learn-a-bit will teach you the fundamentals through a hands-on approach. You wil
 - [Challenge #1 - Submission](./Challenges/Challenge01/header-final/)
 - [Challenge #2 - Submission](./Challenges/Challenge02/)
 - [Challenge #3 - Submission](./Challenges/Challenge03/)
+- [Challenge #4 - Submission](./Challenges/Challenge04/)
 
 
 ---

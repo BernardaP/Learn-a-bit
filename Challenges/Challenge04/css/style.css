@@ -17,8 +17,8 @@ body {
 
 .contact-card {
   margin-top: 20px;
-  text-align: center;
   color: white;
+  text-align: center;
 }
 
 .about-title {
@@ -31,26 +31,18 @@ body {
 }
 
 .contact-info > p {
-  font-size: 15px;
-  opacity: 0.7;
-  font-weight: lighter;
   padding: 15px;
+  font-size: 15px;
+  font-weight: lighter;
+  opacity: 0.7;
 }
-
-/* .contact-card *:not(:last-child) {
-  margin-bottom: 15px;
-} */
-
-/* .border-bckgd:not(:last-of-type){
-  margin-bottom: 10px;
-} */
 
 .border-bckgd {
   padding: 15px;
+  margin-bottom: 10px;
   background-color: rgb(34, 23, 39);
   border: 1px solid  #5EF4D6;
   border-radius: 10px;
-  margin-bottom: 10px;
 }
 .circle {
   padding: 6px;
@@ -59,14 +51,13 @@ body {
   border-radius: 50%;
 }
 .social-media-icons {
-  color:#5EF4D6;
   margin: 15px 0;
+  color:#5EF4D6;
 }
 .contact-form {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-  
 }
 
 .button {
@@ -100,17 +91,16 @@ input, textarea {
     margin-top: 60px;
   }  
   .contact-info{
+    width: 50%;
     margin-right: 20px;
     margin-bottom: 0px;
-    width: 50%;
   }
   .contact-info > p {
-    font-size: 20px;
     padding: 20px;
     margin-top: 15px;
+    font-size: 20px;
   }
   .social-media-icons {
-  
     margin-bottom: 0px;
   }
   .contact-form {
